@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indicadores</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Open Sans', sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+
+    .flex-wrap { flex: 1; }
+    .blue { color: #5aade1; }
+    .yellow { color: #faaa39; }
+    .green { color: #2bbe5c; }
+
+
+    .title {
+      background-color: #06223f;
+      padding: 16px;
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .title > span {
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    .title .periodo {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      align-items: flex-end;
+    }
+
+    .title .periodo > span {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+
+    .subtitle {
+      background-color: #e8eae8;
+      color: #161d47;
+      font-size: 14px;
+      font-weight: 800;
+      text-align: center;
+      padding: 8px;
+    }
+
+
+    .items {
+      background-color: #f9fcfe;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .items > * {
+      flex: 1 0 0;
+      max-width: calc(100% / 6);
+      text-align: center;
+      position: relative;
+      padding: 0 16px;
+    }
+
+    .items > * > .main-info {
+      font-weight: 800;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .items > * > .secondary-info {
+      margin-top: 4px;
+      color: #857a93;
+      font-size: 10px;
+    }
+
+
+    .items > *:not(:first-child) {
+      box-shadow: rgba(50, 50, 93, 0.2) -20px 0px 15px -15px;
+    }
+
+    .graph-wrapper {
+      display: flex;
+    }
+
+    .graph-wrapper > div { 
+      flex: 1 0 0; 
+      text-align: center;
+      padding: 16px;
+    }
+
+    .graph-wrapper > div + div {
+      box-shadow: rgba(50, 50, 93, 0.2) -20px 0px 15px -15px;
+    }
+
+    .table-wrapper {
+      text-align: center;
+      padding: 32px;
+    }
+
+    .table-wrapper table .main {
+      min-width: 300px;
+    }
+
+    .table-wrapper table tbody tr:nth-child(even) {
+      background: rgba(0, 0, 0, .075);
+    }
+
+    .table-wrapper table th {
+      border-bottom: 1px solid rgba(0, 0, 0, .175);
+    }
+
+    .table-wrapper table th,
+    .table-wrapper table td {
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+
+    .table-wrapper table th:first-child,
+    .table-wrapper table td:first-child {
+      text-align: left;
+    }
+
+    .table-wrapper table th:not(:first-child),
+    .table-wrapper table td:not(:first-child) {
+      text-align: right;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="title">
+    <div class="flex-wrap">
+      <img src="./images/ativa.svg" alt="Ativa">
+    </div>
+
+    <span>Desenvolvimento</span>
+
+    <div class="flex-wrap">
+      <div class="periodo">
+        <span>MAIO <span class="blue">2021</span></span>
+        <small>Indicadores de TI</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="subtitle">
+    <span>Itens de Backlog por Squad</span>
+  </div>
+
+  <div class="items">
+    <div>
+      <p class="main-info yellow">-10,32%</p>
+      <p class="secondary-info">Lorem, ipsum dolor.</p>
+    </div>
+    <div>
+      <p class="main-info green">+15,55%</p>
+      <p class="secondary-info">Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div>
+      <p class="main-info">000</p>
+      <p class="secondary-info">Lorem.</p>
+    </div>
+    <div>
+      <p class="main-info">000</p>
+      <p class="secondary-info">Lorem, ipsum dolor.</p>
+    </div>
+    <div>
+      <p class="main-info yellow">-10,32%</p>
+      <p class="secondary-info">Lorem, ipsum dolor.</p>
+    </div>
+    <div>
+      <p class="main-info green">+15,55%</p>
+      <p class="secondary-info">Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div>
+      <p class="main-info">000</p>
+      <p class="secondary-info">Lorem.</p>
+    </div>
+    <div>
+      <p class="main-info">000</p>
+      <p class="secondary-info">Lorem, ipsum dolor.</p>
+    </div>
+  </div>
+
+  <div class="graph-wrapper">
+    <div>
+      [[GRAFICO]]
+    </div>
+  </div>
+
+  <div class="subtitle">
+    <span>Itens de Backlog por Squad</span>
+  </div>
+
+  <div class="graph-wrapper">
+    <div>
+      [[GRAFICO 1]]
+    </div>    
+    <div>
+      [[GRAFICO 2]]
+    </div>
+  </div>
+
+  <div class="subtitle">
+    <span>Disponibilidade</span>
+  </div>
+
+  <div class="table-wrapper">
+
+    <table align="center" cellpadding="0" cellspacing="0">
+      <thead>
+        <th class="main">Tipo</th>
+        <th>Semana 29</th>
+        <th>Semana 30</th>
+        <th>Semana 31</th>
+        <th>Semana 32</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Site</td>
+          <td>100,00%</td>
+          <td>100,00%</td>
+          <td>100,00%</td>
+          <td>100,00%</td>
+        </tr>
+        <tr>
+          <td>Site</td>
+          <td>100,00%</td>
+          <td>100,00%</td>
+          <td>100,00%</td>
+          <td>100,00%</td>
+        </tr>
+        <tr>
+          <td>Site</td>
+          <td>100,00%</td>
+          <td>100,00%</td>
+          <td>100,00%</td>
+          <td>100,00%</td>
+        </tr>
+        <tr>
+          <td>Site</td>
+          <td>100,00%</td>
+          <td>100,00%</td>
+          <td>100,00%</td>
+          <td>100,00%</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+
+</body>
+</html>
